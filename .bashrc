@@ -75,7 +75,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls -p --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -117,6 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # custom
+# path
+export PATH="~/.local/bin:$PATH"
 # aliases
 alias nvim='/usr/local/nvim-linux64/bin/nvim'
 alias work='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev'

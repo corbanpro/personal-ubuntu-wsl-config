@@ -1,7 +1,11 @@
 # personal-ubuntu-config
-open a new ubuntu instance and run:  
+
+open a new ubuntu instance and run:
+
 ```
-mkdir ~/personal-ubuntu-config
-git clone https://github.com/corbanpro/personal-ubuntu-config.git ~/personal-ubuntu-config
-bash ~/personal-ubuntu-config/init.sh
+git init -b main
+git remote add origin https://github.com/corbanpro/personal-ubuntu-config
+git fetch origin
+get checkout main -f
+bash ~/.init.sh
 ```

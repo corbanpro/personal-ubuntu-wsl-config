@@ -1,10 +1,12 @@
 #!/bin/bash
-cp -r ~/personal-ubuntu-config/.bashrc ~/.bashrc
-cp -r ~/personal-ubuntu-config/.dir_colors ~/dir_colors
-source ~/.bashrc
 sudo update
 sudo upgrade
-sudo apt install unzip ripgrep luarocks nodejs gh fd-find #build-essential python3-neovim tree-sitter-cli
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
+fnm use --install-if-missing 20
+sudo apt install unzip ripgrep luarocks gh fd-find #build-essential python3-neovim tree-sitter-cli
+mkdir -p ~/.local/bin/fd
+ln -s $(which fdfind) ~/.local/bin/fd
 npm install -g typescript typescript-language-server emmet-ls
 bash ~/bash/addnvim.sh
 gh auth login

@@ -1,4 +1,4 @@
-# personal-ubuntu-config
+# personal-ubuntu-wsl-config
 
 open a new ubuntu instance and run:
 

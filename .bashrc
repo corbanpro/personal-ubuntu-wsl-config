@@ -118,7 +118,7 @@ fi
 
 # custom
 # path
-export PATH="~/.local/bin:$PATH"
+export BROWSER=wslview
 # aliases
 alias nvim='/usr/local/nvim-linux64/bin/nvim'
 alias work='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev'

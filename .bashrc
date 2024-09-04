@@ -127,6 +127,7 @@ alias home='cd /mnt/c/Users/corba'
 alias addnvim='bash ~/bash/addnvim.sh'
 alias removenvim='bash ~/bash/removenvim.sh'
 alias resetnvim='bash ~/bash/restartnvim.sh'
+alias gitc='git add . && git commit -m'
 # color themes
 eval $(dircolors ~/.dir_colors)
 echo -ne '\e]11;#222222\e\\'

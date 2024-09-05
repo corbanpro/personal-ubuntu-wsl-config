@@ -129,6 +129,7 @@ alias removenvim='bash ~/bash/removenvim.sh'
 alias resetnvim='bash ~/bash/restartnvim.sh'
 alias gitc='git add . && git commit -m'
 alias chess='cd /mnt/c/Users/corba/Documents/3_SideProjects/Rust/prochess-chess-logic-wasm'
+alias og='lazygit'
 # color themes
 eval $(dircolors ~/.dir_colors)
 echo -ne '\e]11;#222222\e\\'

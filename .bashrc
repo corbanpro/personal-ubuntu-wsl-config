@@ -128,6 +128,7 @@ alias addnvim='bash ~/bash/addnvim.sh'
 alias removenvim='bash ~/bash/removenvim.sh'
 alias resetnvim='bash ~/bash/restartnvim.sh'
 alias gitc='git add . && git commit -m'
+alias chess='cd /mnt/c/Users/corba/Documents/3_SideProjects/Rust/prochess-chess-logic-wasm'
 # color themes
 eval $(dircolors ~/.dir_colors)
 echo -ne '\e]11;#222222\e\\'
@@ -138,3 +139,4 @@ if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
 
 # Add shell-option to ~/.inputrc to enable case-insensitive tab completion
 echo 'set completion-ignore-case On' >> ~/.inputrc
+. "$HOME/.cargo/env"

@@ -122,6 +122,7 @@ export BROWSER=wslview
 # aliases
 alias nvim='/usr/local/nvim-linux64/bin/nvim'
 alias work='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev'
+alias sc='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev/StrategyCodex/SourceCode'
 alias school='cd /mnt/c/Users/corba/Documents/1_School/BYU_9_F24'
 alias home='cd /mnt/c/Users/corba'
 alias addnvim='bash ~/bash/addnvim.sh'

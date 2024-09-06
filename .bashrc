@@ -121,15 +121,14 @@ fi
 export BROWSER=wslview
 # aliases
 alias nvim='/usr/local/nvim-linux64/bin/nvim'
-alias work='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev'
-alias sc='cd /mnt/c/Users/corba/Documents/2_Work/BYU_Dev/StrategyCodex/SourceCode'
+alias work='cd ~/documents/work/byu-dev/'
+alias sc='cd ~/documents/work/byu-dev/StrategyCodex/SourceCode'
 alias school='cd /mnt/c/Users/corba/Documents/1_School/BYU_9_F24'
 alias home='cd /mnt/c/Users/corba'
 alias addnvim='bash ~/bash/addnvim.sh'
 alias removenvim='bash ~/bash/removenvim.sh'
 alias resetnvim='bash ~/bash/restartnvim.sh'
-alias gitc='git add . && git commit -m'
-alias chess='cd /mnt/c/Users/corba/Documents/3_SideProjects/Rust/prochess-com'
+alias chess='cd ~/documents/side_projects/rust/prochess/'
 alias og='lazygit'
 # color themes
 eval $(dircolors ~/.dir_colors)

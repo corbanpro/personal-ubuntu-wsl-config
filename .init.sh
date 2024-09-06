@@ -10,3 +10,4 @@ npm install -g typescript typescript-language-server emmet-ls
 bash ~/bash/addnvim.sh
 gh auth login
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo cargo-shuttle install

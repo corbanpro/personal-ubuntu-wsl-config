@@ -1,0 +1,9 @@
+*.*
+*
+!.gitignore
+!bash
+!.bashrc
+!.dir_colors
+!.init.sh
+!README.md
+!.hushlogin

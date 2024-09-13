@@ -19,4 +19,8 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 rm -rf lazygit lazygit.tar.gz
 
+mkdir -p ~/temp/autojump
+git clone https://github.com/wting/autojump.git ~/temp/autojump
+~/temp/autojump/install.py
+
 gh auth login

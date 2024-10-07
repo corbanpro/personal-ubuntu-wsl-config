@@ -11,7 +11,7 @@ npm install -g typescript typescript-language-server emmet-ls neovim
 bash ~/bash/addnvim.sh
 
 fnm use --install-if-missing 20
-cargo install cargo-shuttle
+# cargo install cargo-shuttle
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
@@ -21,6 +21,11 @@ rm -rf lazygit lazygit.tar.gz
 
 mkdir -p ~/temp/autojump
 git clone https://github.com/wting/autojump.git ~/temp/autojump
-~/temp/autojump/install.py
+cd temp/autojump
+./install.py
+cd ~
+rm -rf temp/autojump
 
 gh auth login
+
+mkdir documents documents/side-projects documents/side-projects documents/work documents/work/byu-dev

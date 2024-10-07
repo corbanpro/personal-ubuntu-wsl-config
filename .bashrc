@@ -122,9 +122,6 @@ export BROWSER=wslview
 export PATH="$PATH:/usr/local/nvim-linux64/bin"
 
 ## aliases
-alias addnvim='bash ~/bash/addnvim.sh'
-alias removenvim='bash ~/bash/removenvim.sh'
-alias resetnvim='bash ~/bash/restartnvim.sh'
 alias og='lazygit'
 
 ## color themes

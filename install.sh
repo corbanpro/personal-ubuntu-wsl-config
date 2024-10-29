@@ -7,7 +7,7 @@ source ~/.bashrc
 
 sudo apt install unzip ripgrep luarocks gh fd-find openssl libssl-dev python3.12-venv #build-essential python3-neovim tree-sitter-cli
 sudo mv /bin/fdfind /bin/fd
-npm install -g typescript typescript-language-server emmet-ls neovim jsdoc
+npm install -g typescript typescript-language-server emmet-ls neovim jsdoc live-server
 bash ~/bash/addnvim.sh
 
 fnm use --install-if-missing 20

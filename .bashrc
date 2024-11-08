@@ -120,9 +120,11 @@ fi
 ## path
 export BROWSER=wslview
 export PATH="$PATH:/usr/local/nvim-linux64/bin"
+alias nvim="bash ~/bash/opennvim.sh"
 
 ## aliases
 alias og='lazygit'
+alias py='python3'
 
 ## color themes
 # eval $(dircolors ~/.dir_colors)
@@ -144,3 +146,5 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 [[ -s /home/corba/.autojump/etc/profile.d/autojump.sh ]] && source /home/corba/.autojump/etc/profile.d/autojump.sh
+
+# tmux new-session -A -s main

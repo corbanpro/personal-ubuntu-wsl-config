@@ -5,7 +5,7 @@ sudo apt upgrade
 curl -fsSL https://fnm.vercel.app/install | bash
 source ~/.bashrc
 
-sudo apt install unzip ripgrep luarocks gh fd-find openssl libssl-dev python3.12-venv #build-essential python3-neovim tree-sitter-cli
+sudo apt install unzip ripgrep luarocks gh fd-find openssl libssl-dev python3.12-venv jq tmux net-tools #build-essential python3-neovim tree-sitter-cli
 sudo mv /bin/fdfind /bin/fd
 npm install -g typescript typescript-language-server emmet-ls neovim jsdoc live-server
 bash ~/bash/addnvim.sh

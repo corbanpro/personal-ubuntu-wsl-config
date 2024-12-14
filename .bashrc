@@ -16,8 +16,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=5000
+# HISTTIMEFORMAT="%F%T "
+HISTFILESIZE=5000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,12 +120,12 @@ fi
 
 ## path
 export BROWSER=wslview
-export PATH="$PATH:/usr/local/nvim-linux64/bin"
-alias nvim="bash ~/bash/opennvim.sh"
+export PROMPT_COMMAND='history -a'
 
 ## aliases
-alias og='lazygit'
 alias py='python3'
+alias og='lazygit'
+alias d="source ~/.scripts/d.sh"
 
 ## color themes
 # eval $(dircolors ~/.dir_colors)
@@ -144,6 +145,21 @@ if [ -d "$FNM_PATH" ]; then
 	export PATH="$FNM_PATH:$PATH"
 	eval "$(fnm env)"
 fi
+
+# show message if git repos are out of date
+filler_lines=3
+total_lines=$(~/.local/bin/checkgit | sort -u | wc -l)
+incomplete_repos=$(($total_lines - $filler_lines))
+
+if [[ $incomplete_repos -gt 2 ]]; then
+	echo "$incomplete_repos repositories out of date"
+	mapfile -t matches < <(~/.local/bin/checkgit | grep 'corba/')
+	for repo in "${matches[@]}"; do
+		echo $repo
+	done
+fi
+
+~/.config/ubuntu/update_config.sh
 
 [[ -s /home/corba/.autojump/etc/profile.d/autojump.sh ]] && source /home/corba/.autojump/etc/profile.d/autojump.sh
 

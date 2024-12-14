@@ -6,4 +6,4 @@ cp -r \
 	~/.inputrc \
 	~/.vimrc \
 	~/.profile \
-	~/.config/ubuntu
+	~/.config/ubuntu/home_dir

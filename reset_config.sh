@@ -19,16 +19,12 @@ sudo mv /bin/fdfind /bin/fd
 # install npm packages
 npm install -g typescript typescript-language-server emmet-ls neovim jsdoc live-server tsx jest aws-cdk nodemon
 
-# install nvim
-mkdir -p ~/temp/nvim-linux64 ~/.config/nvim &&
-	curl -o ~/temp/nvim-linux64.tar.gz -L "https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz" &&
-	tar -xzf ~/temp/nvim-linux64.tar.gz -C ~/temp &&
-	sudo mv ~/temp/nvim-linux64/ /usr/local/ &&
-	rm -rf ~/temp &&
-	git clone https://github.com/corbanpro/neovim-config.git ~/.config/nvim
-
 # download helper scripts
 git clone https://github.com/corbanpro/misc-scripts.git ~/.scripts
+chmod a+x ~/.scripts/*.sh
+
+# install nvim
+~/.scripts/addnvim.sh
 
 # install cargo packages
 cargo install cargo-shuttle cargo-script cmd-wrapped

@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=5000
-# HISTTIMEFORMAT="%F%T "
+HISTTIMEFORMAT="%F%T "
 HISTFILESIZE=5000
 
 # check the window size after each command and, if necessary,

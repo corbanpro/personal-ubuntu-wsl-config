@@ -151,7 +151,7 @@ filler_lines=3
 total_lines=$(~/.local/bin/cgit | sort -u | wc -l)
 incomplete_repos=$(($total_lines - $filler_lines))
 
-if [[ $incomplete_repos -gt 2 ]]; then
+if [[ $incomplete_repos -gt 4 ]]; then
 	echo "$incomplete_repos repositories out of date"
 	mapfile -t matches < <(~/.local/bin/cgit | grep 'corba/')
 	for repo in "${matches[@]}"; do

@@ -123,7 +123,7 @@ export BROWSER=wslview
 export PROMPT_COMMAND='history -a'
 
 ## aliases
-alias py='python3'
+alias python='python3'
 alias og='lazygit'
 alias d="source ~/.scripts/d.sh"
 

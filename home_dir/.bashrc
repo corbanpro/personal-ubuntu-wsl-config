@@ -147,11 +147,11 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # show message if git repos are out of date
-filler_lines=3
-total_lines=$(~/.local/bin/cgit | sort -u | wc -l)
+filler_lines=1
+total_lines=$(~/.local/bin/cgit -c | sort -u | wc -l)
 incomplete_repos=$(($total_lines - $filler_lines))
 
-if [[ $incomplete_repos -gt 4 ]]; then
+if [[ $incomplete_repos -gt 2 ]]; then
 	echo "$incomplete_repos repositories out of date"
 	mapfile -t matches < <(~/.local/bin/cgit | grep 'corba/')
 	for repo in "${matches[@]}"; do

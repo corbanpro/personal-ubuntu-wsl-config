@@ -164,3 +164,5 @@ fi
 [[ -s /home/corba/.autojump/etc/profile.d/autojump.sh ]] && source /home/corba/.autojump/etc/profile.d/autojump.sh
 
 # tmux new-session -A -s main
+
+export PATH="/home/corba/.ebcli-virtual-env/executables:$PATH"

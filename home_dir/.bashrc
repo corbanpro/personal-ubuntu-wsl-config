@@ -166,3 +166,5 @@ fi
 # tmux new-session -A -s main
 
 export PATH="/home/corba/.ebcli-virtual-env/executables:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/.go

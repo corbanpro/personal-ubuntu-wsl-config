@@ -126,6 +126,7 @@ export PROMPT_COMMAND='history -a'
 alias python='python3'
 alias og='lazygit'
 alias d="source ~/.scripts/d.sh"
+alias nrd="npm run dev"
 
 ## color themes
 # eval $(dircolors ~/.dir_colors)
@@ -166,5 +167,6 @@ fi
 # tmux new-session -A -s main
 
 export PATH="/home/corba/.ebcli-virtual-env/executables:$PATH"
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/.go/bin"
 export GOPATH=$HOME/.go

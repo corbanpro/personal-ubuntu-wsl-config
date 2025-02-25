@@ -7,7 +7,7 @@ sudo apt upgrade
 # install node
 curl -fsSL https://fnm.vercel.app/install | bash
 source ~/.bashrc
-fnm use --install-if-missing 20
+fnm use --install-if-missing 22
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

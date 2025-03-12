@@ -168,5 +168,6 @@ fi
 
 export PATH="/home/corba/.ebcli-virtual-env/executables:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/opt/mssql-tools18/bin"
 export PATH="$PATH:$HOME/.go/bin"
 export GOPATH=$HOME/.go

@@ -126,7 +126,7 @@ export PROMPT_COMMAND='history -a'
 alias python='python3'
 alias og='lazygit'
 alias d="source ~/.scripts/d.sh"
-alias nrd="npm run dev"
+alias digs="dig +short"
 
 ## color themes
 # eval $(dircolors ~/.dir_colors)

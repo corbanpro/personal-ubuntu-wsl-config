@@ -137,7 +137,10 @@ alias digs="dig +short"
 if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' >~/.inputrc; fi
 
 # Add shell-option to ~/.inputrc to enable case-insensitive tab completion
-echo 'set completion-ignore-case On' >>~/.inputrc
+echo 'set completion-ignore-case On
+"\e[B": history-search-forward
+"\e[A": history-search-backward ' >>~/.inputrc
+
 . "$HOME/.cargo/env"
 
 # fnm

@@ -143,13 +143,6 @@ echo 'set completion-ignore-case On
 
 . "$HOME/.cargo/env"
 
-# fnm
-FNM_PATH="/home/corba/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-	export PATH="$FNM_PATH:$PATH"
-	eval "$(fnm env)"
-fi
-
 # show message if git repos are out of date
 filler_lines=1
 total_lines=$(~/.local/bin/cgit -c | sort -u | wc -l)
@@ -174,3 +167,9 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/opt/mssql-tools18/bin"
 export PATH="$PATH:$HOME/.go/bin"
 export GOPATH=$HOME/.go
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+nvm use --silent

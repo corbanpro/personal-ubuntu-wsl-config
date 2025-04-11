@@ -7,4 +7,5 @@ cp -r \
 	~/.vimrc \
 	~/.profile \
 	~/.editorconfig \
+	~/.nvmrc \
 	~/.config/ubuntu/home_dir

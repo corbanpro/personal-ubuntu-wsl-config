@@ -84,26 +84,10 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -127,40 +111,14 @@ alias python='python3'
 alias og='lazygit'
 alias d="source ~/.scripts/d.sh"
 alias digs="dig +short"
-
-## color themes
-# eval $(dircolors ~/.dir_colors)
-# echo -ne '\e]11;#222222\e\\'
-
-# If ~/.inputrc doesn't exist yet: First include the original /etc/inputrc
-# so it won't get overriden
-if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' >~/.inputrc; fi
-
-# Add shell-option to ~/.inputrc to enable case-insensitive tab completion
-echo 'set completion-ignore-case On
-"\e[B": history-search-forward
-"\e[A": history-search-backward ' >>~/.inputrc
+alias bat="batcat --pager=never"
+alias batl='batcat '
 
 . "$HOME/.cargo/env"
-
-# show message if git repos are out of date
-filler_lines=1
-total_lines=$(~/.local/bin/cgit -c | sort -u | wc -l)
-incomplete_repos=$(($total_lines - $filler_lines))
-
-if [[ $incomplete_repos -gt 2 ]]; then
-	echo "$incomplete_repos repositories out of date"
-	mapfile -t matches < <(~/.local/bin/cgit | grep 'corba/')
-	for repo in "${matches[@]}"; do
-		echo $repo
-	done
-fi
 
 ~/.config/ubuntu/update_config.sh
 
 [[ -s /home/corba/.autojump/etc/profile.d/autojump.sh ]] && source /home/corba/.autojump/etc/profile.d/autojump.sh
-
-# tmux new-session -A -s main
 
 export PATH="/home/corba/.ebcli-virtual-env/executables:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
@@ -172,4 +130,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-nvm use --silent
+# nvm use --silent

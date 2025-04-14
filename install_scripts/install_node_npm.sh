@@ -13,4 +13,4 @@ nvm install 23
 
 nvm use
 
-npm install -g typescript typescript-language-server emmet-ls neovim jsdoc live-server tsx jest aws-cdk nodemon
+npm install -g typescript typescript-language-server emmet-ls neovim jsdoc live-server tsx jest aws-cdk nodemon bash-language-server vscode-langservers-extracted

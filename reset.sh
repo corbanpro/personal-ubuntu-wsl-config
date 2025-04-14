@@ -8,4 +8,4 @@
 	./install_scripts/install_autojump.sh &&
 	./install_scripts/install_csharp.sh &&
 	./install_scripts/github_login.sh &&
-	~/.scripts/addnvim.sh
+	./install_scripts/install_nvim.sh
